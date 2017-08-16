@@ -1,0 +1,9 @@
+{
+  "bucket":"YOU BUCKET HERE",
+  "access_key":"YOUR KEY HERE",
+  "secret":"YOUR BUCKET HERE",
+  "region":"us-east-1",
+  "source_dir":"YOUR SOURCE DIR",
+  "replace_content": true,
+  "debug": true
+}

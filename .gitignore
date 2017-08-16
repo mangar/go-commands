@@ -1,0 +1,5 @@
+_not_on_git
+.vscode
+bin/**
+pkg/**
+run.sh
