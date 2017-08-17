@@ -57,6 +57,7 @@ func Upload(files []string, config config.Config) {
 func uploadFile(index int, fileName string, control *sync.WaitGroup) {
 
 	newFileName := strings.Replace(fileName, _config.SourceDir, "", -1)
+	// fmt.Println("[", PadLeft(strconv.Itoa(index), " ", 3), "/", _totalFilesCount, "] uploading...", newFileName)
 	fmt.Println("[", index, "/", _totalFilesCount, "] uploading...", newFileName)
 
 	file, err := os.Open(fileName)

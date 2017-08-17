@@ -5,3 +5,6 @@ pkg/**
 run.sh
 src/github.com/**
 src/s3upload/s3upload
+src/s3upload/src
+src/s3upload/bin
+src/s3upload/pkg
