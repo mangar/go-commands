@@ -23,18 +23,14 @@ The command bellow will install the depencies needed to run the project
 
 
 
+__Installing__
+
+
+	curl -sSL https://github.com/mangar/go-commands/archive/feature/make.zip -o go-commands-master.zip; unzip go-commands-master.zip; cd go-commands-feature-make/src/s3upload; make; make install
+
+
 
 ---
 
 
 
-__TODO__
-
-- comando para baixar o código todo e fazer o make na maquina...
-
-
-
-\curl -sSL https://codeload.github.com/mangar/docker/zip/master | bash -s stable
-
-
-curl -sSL https://github.com/mangar/go-commands/archive/feature/make.zip -o go-commands-master.zip; unzip go-commands-master.zip; cd go-commands-feature-make/src/s3upload; make; make install
