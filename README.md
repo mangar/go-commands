@@ -37,4 +37,4 @@ __TODO__
 \curl -sSL https://codeload.github.com/mangar/docker/zip/master | bash -s stable
 
 
-curl -sSL https://codeload.github.com/mangar/docker/zip/master -o s3upload.zip; unzip s3upload.zip; 
+curl -sSL https://github.com/mangar/go-commands/archive/feature/make.zip -o go-commands-master.zip; unzip go-commands-master.zip; cd go-commands-feature-make/src/s3upload; make; make install

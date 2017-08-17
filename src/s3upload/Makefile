@@ -9,7 +9,8 @@ BINARY=s3upload
 # 
 VERSION=1.0.0
 BUILD=`date +%FT%T%z`
-HASH=`git rev-parse HEAD`
+HASH=`date +%FT%T%z`
+# HASH=`git rev-parse HEAD`
 
 # 
 THIS_DIR=$(shell pwd)/../../
