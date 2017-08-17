@@ -4,6 +4,19 @@
 ## S3Upload
 
 
-__Dependencies__
+__Build__
 
-	go get -u github.com/aws/aws-sdk-go
+  make install
+
+
+
+__TODO__
+
+- comando para baixar o código todo e fazer o make na maquina...
+
+
+
+\curl -sSL https://codeload.github.com/mangar/docker/zip/master | bash -s stable
+
+
+curl -sSL https://codeload.github.com/mangar/docker/zip/master -o s3upload.zip; unzip s3upload.zip; 
