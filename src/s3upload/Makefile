@@ -26,6 +26,11 @@ default:
 	go build ${LDFLAGS} -o ${BINARY}
 	
 
+development:
+	clear
+	cd $(GOPATH)
+	go get -u github.com/aws/aws-sdk-go
+
 install:
 	cp ./${BINARY} /usr/local/bin/${BINARY} 
 

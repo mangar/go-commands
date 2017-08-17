@@ -4,3 +4,4 @@ bin/**
 pkg/**
 run.sh
 src/github.com/**
+src/s3upload/s3upload
