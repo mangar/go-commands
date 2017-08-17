@@ -3,3 +3,4 @@ _not_on_git
 bin/**
 pkg/**
 run.sh
+src/github.com/**
