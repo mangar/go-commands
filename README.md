@@ -26,7 +26,7 @@ The command bellow will install the depencies needed to run the project
 __Installing__
 
 
-	curl -sSL https://github.com/mangar/go-commands/archive/feature/make.zip -o go-commands-master.zip; unzip go-commands-master.zip; cd go-commands-feature-make/src/s3upload; make; make install
+	curl -sSL https://github.com/mangar/go-commands/archive/master.zip -o go-commands-master.zip; unzip go-commands-master.zip; cd go-commands-master/src/s3upload; make; make install
 
 
 
