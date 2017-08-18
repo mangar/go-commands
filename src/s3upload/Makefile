@@ -21,14 +21,12 @@ LDFLAGS=-ldflags "-X main.Version=${VERSION} -X main.Build=${BUILD} -X main.Hash
 
 
 default:
-	clear
 	cd $(GOPATH)
 	go get -u github.com/aws/aws-sdk-go
 	go build ${LDFLAGS} -o ${BINARY}
 	
 
 development:
-	clear
 	cd $(GOPATH)
 	go get -u github.com/aws/aws-sdk-go
 
