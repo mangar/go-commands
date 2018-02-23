@@ -18,6 +18,7 @@ var ContentType = map[string]string{
 	"(pdf)$":      "application/pdf",
 	"(zip)$":      "application/zip",
 	"(mp4)$":      "video/x-mpeg",
+	"(svg)$":      "image/svg+xml",
 }
 
 /**
