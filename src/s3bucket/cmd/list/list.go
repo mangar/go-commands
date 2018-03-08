@@ -2,7 +2,7 @@ package list
 
 import (
 	"fmt"
-	"myaws"
+	"s3bucket/myaws"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/s3"

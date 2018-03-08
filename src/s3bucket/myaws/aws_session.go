@@ -1,8 +1,8 @@
 package myaws
 
 import (
-	"cmd/defaults"
 	"fmt"
+	"s3bucket/cmd/defaults"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/credentials"

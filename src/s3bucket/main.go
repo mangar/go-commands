@@ -1,12 +1,12 @@
 package main
 
 import (
-	"cmd/create"
-	"cmd/defaults"
-	"cmd/delete"
-	"cmd/list"
 	"fmt"
 	"os"
+	"s3bucket/cmd/create"
+	"s3bucket/cmd/defaults"
+	"s3bucket/cmd/delete"
+	"s3bucket/cmd/list"
 
 	emoji "gopkg.in/kyokomi/emoji.v1"
 )

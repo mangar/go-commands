@@ -1,9 +1,9 @@
 package delete
 
 import (
-	"cmd/defaults"
 	"fmt"
-	"myaws"
+	"s3bucket/cmd/defaults"
+	"s3bucket/myaws"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/s3"
