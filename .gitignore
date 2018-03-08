@@ -8,3 +8,11 @@ src/s3upload/s3upload
 src/s3upload/src
 src/s3upload/bin
 src/s3upload/pkg
+
+
+src/s3bucket/src/github.com/**
+src/s3bucket/src/golang.org/**
+src/s3bucket/src/gopkg.in/**
+src/s3bucket/src/sourcegraph.com/**
+src/s3bucket/bin
+src/s3bucket/pkg
