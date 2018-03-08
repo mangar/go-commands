@@ -3,6 +3,7 @@ package main
 import (
 	"cmd/create"
 	"cmd/defaults"
+	"cmd/delete"
 	"cmd/list"
 	"fmt"
 	"os"
@@ -41,7 +42,7 @@ func main() {
 
 	} else if os.Args[1] == "delete" {
 		defaults.BucketName = os.Args[2]
-		fmt.Println("DELETING THE BUCKET")
+		delete.DeleteBucket()
 
 	} else if os.Args[1] == "list" {
 		list.ListBuckets()

@@ -26,6 +26,23 @@ func create() {
 		fmt.Println("Bucket already exits")
 	} else {
 		fmt.Println("Creating...")
+		var sess = myaws.GetAwsSession()
+		var svc = s3.New(sess)
+
+		_, err := svc.CreateBucket(&s3.CreateBucketInput{
+			Bucket: aws.String(defaults.BucketName),
+		})
+		if err != nil {
+			fmt.Println("Unable to create bucket %q, %v", defaults.BucketName, err)
+		}
+
+		// // Wait until bucket is created before finishing
+		// fmt.Printf("Waiting for bucket %q to be created...\n", bucket)
+
+		// err = svc.WaitUntilBucketExists(&s3.HeadBucketInput{
+		// 	Bucket: aws.String(bucket),
+		// })
+
 	}
 
 }
