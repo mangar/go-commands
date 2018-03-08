@@ -1,36 +1,53 @@
 # GO Command line tools
 
+## Building
 
-## S3Upload
+Inside the base dir, same level as ```src``` directory, type:
 
-
-__Building__
-
-The command bellow will make the binary and install it at: ```/usr/local/bin```.
-After the instalation you can test it by running: ```/usr/local/bin/s3upload --version```
+	export GOPATH=`pwd``
 
 
+
+Go inside the command you want to build, for instance ```s3bucket``` and ```make````
+
+	cd /src/s3bucket
 	make
-	make install
-
-
-__Developing__
-
-The command bellow will install the depencies needed to run the project
-
-
-	make development
 
 
 
-__Installing__
 
+
+## Developing
+
+
+Inside the base dir, same level as ```src``` directory, type:
+
+	export GOPATH=`pwd``
+
+
+Go inside the command you want to build, for instance ```s3bucket``` and open the editor
+
+	cd /src/s3bucket
+	
+
+
+
+## Installing
+
+__S3Upload__
 
 	curl -sSL https://github.com/mangar/go-commands/archive/master.zip -o go-commands-master.zip; unzip go-commands-master.zip; cd go-commands-master/src/s3upload; make; make install
 
 
 
----
+__S3Bucket__
+
+	curl -sSL https://github.com/mangar/go-commands/archive/master.zip -o go-commands-master.zip; unzip go-commands-master.zip; cd go-commands-master/src/s3bucket; make; make install
+
+
+
+
+
 
 
 
