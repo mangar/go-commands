@@ -57,7 +57,7 @@ func setWebsite() {
 				Suffix: aws.String("index.html"),
 			},
 			ErrorDocument: &s3.ErrorDocument{
-				Key: aws.String("error.html"),
+				Key: aws.String("index.html"),
 			},
 		},
 	}
