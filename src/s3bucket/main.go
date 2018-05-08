@@ -30,7 +30,7 @@ func main() {
 	} else if os.Args[1] == "help" {
 		fmt.Println("usage: go run s3bucket create|delete BUCKET_NAME")
 		fmt.Println("Ex.:")
-		fmt.Println("go run s3bucket create YOUR_PUBLIC_BUCKET_NAME AWS_KEY AWS_SECRET")
+		fmt.Println("go run s3bucket create YOUR_PUBLIC_BUCKET_NAME")
 		fmt.Println("")
 
 	} else if !hasAwsKeySecretSet() {
@@ -48,7 +48,7 @@ func main() {
 		list.ListBuckets()
 
 	} else {
-		fmt.Println("Buy")
+		fmt.Println("Buy me a beer")
 
 	}
 

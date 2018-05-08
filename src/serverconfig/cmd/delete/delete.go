@@ -8,11 +8,15 @@ import (
 )
 
 func DeleteBucket() {
-
 	fmt.Println("Deleting Config for:", defaults.ProjectName)
+	delete("master")
+	delete("staging")
+	delete("develop")
+}
 
-	fmt.Println("  - master")
-	var serviceUrl = defaults.ServerConfigUrl + "/api/v1/version/" + defaults.ProjectName + "/master"
+func delete(environment string) {
+	fmt.Println("  -", environment)
+	var serviceUrl = defaults.ServerConfigUrl + "/api/v1/version/" + defaults.ProjectName + "/" + environment
 
 	client := &http.Client{}
 	req, err := http.NewRequest("DELETE", serviceUrl, nil)
@@ -23,35 +27,4 @@ func DeleteBucket() {
 		fmt.Printf("%s", err)
 		os.Exit(1)
 	}
-
-	//
-	//
-	fmt.Println("  - staging")
-	serviceUrl = defaults.ServerConfigUrl + "/api/v1/version/" + defaults.ProjectName + "/staging"
-
-	client = &http.Client{}
-	req, err = http.NewRequest("DELETE", serviceUrl, nil)
-	_, err = client.Do(req)
-
-	// _, err := http.Get(serviceUrl)
-	if err != nil {
-		fmt.Printf("%s", err)
-		os.Exit(1)
-	}
-
-	//
-	//
-	fmt.Println("  - develop")
-	serviceUrl = defaults.ServerConfigUrl + "/api/v1/version/" + defaults.ProjectName + "/develop"
-
-	client = &http.Client{}
-	req, err = http.NewRequest("DELETE", serviceUrl, nil)
-	_, err = client.Do(req)
-
-	// _, err := http.Get(serviceUrl)
-	if err != nil {
-		fmt.Printf("%s", err)
-		os.Exit(1)
-	}
-
 }
