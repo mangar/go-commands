@@ -22,15 +22,22 @@ func main() {
 	defaults.Email = os.Getenv("GMAIL_EMAIL")
 	defaults.Pwd = os.Getenv("GMAIL_PWD")
 
+	if !hasGmailSet() {
+		fmt.Println("You must specify the GMAIL_EMAIL and GMAIL_PWD")
+		os.Exit(3)
+	}
+
+	if len(os.Args) == 1 {
+		fmt.Println("Buy me a beer")
+		os.Exit(3)
+	}
+
 	if os.Args[1] == "version" {
 		printVersion()
 
 	} else if os.Args[1] == "help" {
-		fmt.Println("usage: go run gmail send TO_EMAIL, SUBJECT, CONTENT")
+		fmt.Println("usage: gmail send TO_EMAIL, SUBJECT, CONTENT")
 		fmt.Println("")
-
-	} else if !hasGmailSet() {
-		fmt.Println("You must specify the GMAIL_EMAIL and GMAIL_PWD")
 
 	} else if os.Args[1] == "send" {
 		defaults.To = os.Args[2]
