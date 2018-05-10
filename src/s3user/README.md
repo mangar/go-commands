@@ -1,5 +1,9 @@
 # S3User
 
+
+Create a User at AWS
+
+
 ## Development
 
 
@@ -28,9 +32,9 @@ and then...
 
 __Create a Bucket__
 
-... to create a bucket, go into ```s3bucket``` after the __Development__ steps and run:
+... to create a bucket, go into ```s3user``` after the __Development__ steps and run:
 
-    go run main.go create BUCKET_NAME
+    go run main.go create USERNAME BUCKET1,BUCKET2,BUCKET3
 
 
 
@@ -38,8 +42,7 @@ __Delete a bucket__
 
 ... and to delete a bucket, run:
 
-
-    go run main.go delete BUCKET_NAME
+    go run main.go delete USERNAME
     
     
     
