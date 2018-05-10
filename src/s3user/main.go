@@ -5,6 +5,7 @@ import (
 	"os"
 	"s3user/cmd/create"
 	"s3user/cmd/defaults"
+	"s3user/cmd/delete"
 	"s3user/cmd/list"
 
 	emoji "gopkg.in/kyokomi/emoji.v1"
@@ -27,11 +28,13 @@ func main() {
 		printVersion()
 
 	} else if os.Args[1] == "help" {
-		fmt.Println("usage: go run s3user create|delete USERNAME BUCKET1,BUCKET2,BUCKET3")
+		fmt.Println("usage: go run s3user create|delete|list USERNAME BUCKET1,BUCKET2,BUCKET3")
 		fmt.Println("Ex.:")
 		fmt.Println("go run s3user create USERNAME BUCKET1,BUCKET2,BUCKET3")
 		fmt.Println("or")
 		fmt.Println("go run s3user deletecreate USERNAME")
+		fmt.Println("or")
+		fmt.Println("go run s3user list")
 		fmt.Println("")
 
 	} else if !hasAwsKeySecretSet() {
@@ -44,7 +47,7 @@ func main() {
 
 	} else if os.Args[1] == "delete" {
 		defaults.Username = os.Args[2]
-		// delete.DeleteUser()
+		delete.DeleteUser()
 
 	} else if os.Args[1] == "list" {
 		list.ListUsers()
