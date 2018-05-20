@@ -24,6 +24,7 @@ var ContentType = map[string]string{
 	"(.ogg)$":             "audio/ogg",
 	"(.mpeg)$":            "audio/mpeg",
 	"(.webm)$":            "audio/webm",
+	"(.ttf)$":             "application/x-font-ttf",
 }
 
 /**
