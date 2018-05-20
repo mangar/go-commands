@@ -1,35 +1,43 @@
 package upload
 
 import (
+	"fmt"
 	"regexp"
 )
 
 var ContentType = map[string]string{
-	"(html|htm)$": "text/html",
-	"(js)$":       "application/javascript",
-	"(css)$":      "text/css",
-	"(gif)$":      "image/gif",
-	"(ico)$":      "image/x-icon",
-	"(jpg|jpeg)$": "image/jpeg",
-	"(json)$":     "application/json",
-	"(eot)$":      "application/vnd.ms-fontobject",
-	"(otf)$":      "font/otf",
-	"(png)$":      "image/png",
-	"(pdf)$":      "application/pdf",
-	"(zip)$":      "application/zip",
-	"(mp4)$":      "video/x-mpeg",
-	"(svg)$":      "image/svg+xml",
+	"(.html|.htm)$":       "text/html",
+	"(.css)$":             "text/css",
+	"(.txt)$":             "text/plain",
+	"(.gif)$":             "image/gif",
+	"(.ico)$":             "image/x-icon",
+	"(.jpg|jpeg)$":        "image/jpeg",
+	"(.png)$":             "image/png",
+	"(.svg)$":             "image/svg+xml",
+	"(.js|.map|.js.map)$": "application/javascript",
+	"(.json)$":            "application/json",
+	"(.eot)$":             "application/vnd.ms-fontobject",
+	"(.pdf)$":             "application/pdf",
+	"(.zip)$":             "application/zip",
+	"(.json)$":            "application/json",
+	"(.otf)$":             "font/otf",
+	"(.mp4)$":             "video/x-mpeg",
+	"(.ogg)$":             "audio/ogg",
+	"(.mpeg)$":            "audio/mpeg",
+	"(.webm)$":            "audio/webm",
 }
 
 /**
  *
  */
 func GetContentType(fileName string) string {
+	fmt.Println("[ContentType] FileName", fileName)
 	for key, value := range ContentType {
 		match, _ := regexp.MatchString(key, fileName)
 		if match {
+			fmt.Println("  >>", value)
 			return value
 		}
 	}
-	return ""
+	return "not_found"
 }
