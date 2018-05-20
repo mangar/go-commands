@@ -15,7 +15,6 @@ var ContentType = map[string]string{
 	"(.png)$":             "image/png",
 	"(.svg)$":             "image/svg+xml",
 	"(.js|.map|.js.map)$": "application/javascript",
-	"(.json)$":            "application/json",
 	"(.eot)$":             "application/vnd.ms-fontobject",
 	"(.pdf)$":             "application/pdf",
 	"(.zip)$":             "application/zip",
