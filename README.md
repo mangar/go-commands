@@ -4,7 +4,7 @@
 
 Inside the base dir, same level as ```src``` directory, type:
 
-	export GOPATH=`pwd``
+	export GOPATH=`pwd`
 
 
 

@@ -21,8 +21,6 @@ and then...
     export AWS_SECRET="YOUR_SECRET_HERE"
 
 
-
-
 ## Running
 
 
